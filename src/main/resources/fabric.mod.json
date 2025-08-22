@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "goddamn-shit",
+	"version": "${version}",
+	"name": "Goddamn Shit",
+	"description": "Why waste when you can reuse?",
+	"authors": [
+		"totallynotbocchi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/goddamn-shit/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			{
+				"value": "goddamn.shit.GoddamnShit",
+				"adapter": "kotlin"
+			}
+		],
+		"client": [
+			{
+				"value": "goddamn.shit.GoddamnShitClient",
+				"adapter": "kotlin"
+			}
+		]
+	},
+	"mixins": [
+		"goddamn-shit.mixins.json",
+		{
+			"config": "goddamn-shit.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*",
+		"fabric-language-kotlin": "*"
+	}
+}

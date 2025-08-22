@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "goddamn-shit:item/shit_leggings"
+  }
+}
