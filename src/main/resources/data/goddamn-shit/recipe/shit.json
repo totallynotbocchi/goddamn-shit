@@ -1,0 +1,11 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"category": "misc",
+	"ingredients": [
+		{ "item": "goddamn-shit:pile_of_shit" }
+	],
+	"result": {
+		"id": "goddamn-shit:shit",
+		"count": 1
+	}
+}

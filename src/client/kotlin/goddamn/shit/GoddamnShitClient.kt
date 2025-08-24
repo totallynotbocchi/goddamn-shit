@@ -12,5 +12,6 @@ object GoddamnShitClient : ClientModInitializer {
 		LOGGER.info("A goddamm shit is starting...")
 		SoundManager.init()
 		ModItems.init()
+		ModBlocks.init()
 	}
 }

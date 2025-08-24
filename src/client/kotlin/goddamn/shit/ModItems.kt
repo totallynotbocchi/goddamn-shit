@@ -61,20 +61,16 @@ object ModItems {
 		val identf: Identifier = Identifier.of(GoddamnShitClient.MOD_ID, id)
 		return Registry.register(Registries.ITEM, identf, item)
 	}
-
-	fun addToGroup(group: RegistryKey<ItemGroup>, item: Item) {
-		ItemGroupEvents.modifyEntriesEvent(group).register{ it.add(item) }
-	}
 	
 	fun init() {
 		ShitArmorMaterial.init()
 
 		FuelRegistry.INSTANCE.add(this.SHIT, Utils.inTicks(10))
-		this.addToGroup(ItemGroups.INGREDIENTS, this.SHIT)
-		this.addToGroup(ItemGroups.COMBAT, this.SHIT_SWORD)
-		this.addToGroup(ItemGroups.COMBAT, this.SHIT_HELMET)
-		this.addToGroup(ItemGroups.COMBAT, this.SHIT_CHESTPLATE)
-		this.addToGroup(ItemGroups.COMBAT, this.SHIT_LEGGINGS)
-		this.addToGroup(ItemGroups.COMBAT, this.SHIT_BOOTS)
+		Utils.addToGroup(ItemGroups.INGREDIENTS, this.SHIT)
+		Utils.addToGroup(ItemGroups.COMBAT, this.SHIT_SWORD)
+		Utils.addToGroup(ItemGroups.COMBAT, this.SHIT_HELMET)
+		Utils.addToGroup(ItemGroups.COMBAT, this.SHIT_CHESTPLATE)
+		Utils.addToGroup(ItemGroups.COMBAT, this.SHIT_LEGGINGS)
+		Utils.addToGroup(ItemGroups.COMBAT, this.SHIT_BOOTS)
 	}
 }
